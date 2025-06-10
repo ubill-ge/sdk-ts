@@ -12,34 +12,37 @@
  * Do not edit the class manually.
  */
 
+
+
 /**
- *
+ * 
  * @export
  * @interface BrandName
  */
 export interface BrandName {
-  /**
-   *
-   * @type {string}
-   * @memberof BrandName
-   */
-  id: string;
-  /**
-   *
-   * @type {string}
-   * @memberof BrandName
-   */
-  name: string;
-  /**
-   *
-   * @type {string}
-   * @memberof BrandName
-   */
-  authorized: string;
-  /**
-   *
-   * @type {string}
-   * @memberof BrandName
-   */
-  createdAt: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BrandName
+     */
+    'id': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BrandName
+     */
+    'name': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BrandName
+     */
+    'authorized': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof BrandName
+     */
+    'createdAt': string;
 }
+

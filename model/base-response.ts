@@ -12,22 +12,25 @@
  * Do not edit the class manually.
  */
 
+
+
 /**
- *
+ * 
  * @export
  * @interface BaseResponse
  */
 export interface BaseResponse {
-  /**
-   * Response status code
-   * @type {number}
-   * @memberof BaseResponse
-   */
-  statusID: number;
-  /**
-   * Human-readable response message
-   * @type {string}
-   * @memberof BaseResponse
-   */
-  message?: string;
+    /**
+     * Response status code
+     * @type {number}
+     * @memberof BaseResponse
+     */
+    'statusID': number;
+    /**
+     * Human-readable response message
+     * @type {string}
+     * @memberof BaseResponse
+     */
+    'message'?: string;
 }
+
