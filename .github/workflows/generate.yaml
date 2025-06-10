@@ -1,0 +1,57 @@
+name: Generate SDK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    env:
+      SDK: typescript-axios
+      SDK_PATH: '${{ github.workspace }}/sdk'
+    steps:
+      - name: Get GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.CI_APP_ID }}
+          private-key: ${{ secrets.CI_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          permission-contents: write
+          permission-pull-requests: write
+          permission-workflows: write
+
+      - name: Get GitHub App User ID
+        id: user-id
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: echo "id=$(gh api "/users/${{ steps.app-token.outputs.app-slug }}[bot]" --jq .id)" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          path: ${{ env.SDK_PATH }}
+
+      - name: Install File Post-processor
+        run: npm install -g prettier@3.5.3
+
+      - name: Generate SDK
+        id: generate
+        uses: ubill-ge/sdk-generator/.github/actions/generator@main
+        env:
+          TS_POST_PROCESS_FILE: 'prettier --write'
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          sdk: ${{ env.SDK }}
+          sdk-version-key: 'npmVersion'
+          output-path: ${{ env.SDK_PATH }}
+
+      - name: Create PR
+        uses: ubill-ge/sdk-generator/.github/actions/pr-creator@main
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          sdk: ${{ env.SDK }}
+          sdk-version: ${{ steps.generate.outputs.sdk-version }}
+          sdk-path: ${{ env.SDK_PATH }}
+          committer: '${{ steps.app-token.outputs.app-slug }}[bot] <${{ steps.user-id.outputs.id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com>'
