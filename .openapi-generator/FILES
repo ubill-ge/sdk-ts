@@ -1,7 +1,6 @@
 .github/CODEOWNERS
 .gitignore
 .npmignore
-.openapi-generator-ignore
 CONTRIBUTING.md
 LICENSE
 README.md
@@ -21,7 +20,6 @@ docs/SMSBalanceResponse.md
 docs/SMSPayload.md
 docs/SendSMSResponse.md
 docs/SmsApi.md
-git_push.sh
 index.ts
 model/base-response.ts
 model/brand-name.ts
