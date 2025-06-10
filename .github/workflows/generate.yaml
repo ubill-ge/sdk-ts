@@ -34,13 +34,13 @@ jobs:
           path: ${{ env.SDK_PATH }}
 
       - name: Install File Post-processor
-        run: npm install -g prettier@3.5.3
+        run: npm install -g eslint@9.28.0
 
       - name: Generate SDK
         id: generate
         uses: ubill-ge/sdk-generator/.github/actions/generator@main
         env:
-          TS_POST_PROCESS_FILE: 'prettier --write'
+          TS_POST_PROCESS_FILE: 'eslint --fix'
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           sdk: ${{ env.SDK }}
