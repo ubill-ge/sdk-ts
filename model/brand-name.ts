@@ -1,5 +1,5 @@
 /* tslint:disable */
-/* eslint-disable */
+ 
 /**
  * UBill API
  * UBill API - provides programmatic access to our resources. You will be able to integrate our service into your system and communicate with clients easily.
