@@ -1,4 +1,5 @@
 .github/CODEOWNERS
+.github/workflows/lint.yaml
 .gitignore
 .npmignore
 CONTRIBUTING.md
