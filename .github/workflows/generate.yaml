@@ -33,19 +33,21 @@ jobs:
           token: ${{ steps.app-token.outputs.token }}
           path: ${{ env.SDK_PATH }}
 
-      - name: Install File Post-processor
-        run: npm install -g eslint@9.28.0
-
       - name: Generate SDK
         id: generate
         uses: ubill-ge/sdk-generator/.github/actions/generator@main
-        env:
-          TS_POST_PROCESS_FILE: 'eslint --fix'
         with:
           github-token: ${{ steps.app-token.outputs.token }}
           sdk: ${{ env.SDK }}
           sdk-version-key: 'npmVersion'
           output-path: ${{ env.SDK_PATH }}
+
+      - name: File Post-processor (manually)
+        working-directory: ${{ env.SDK_PATH }}
+        run: |
+          pnpm install
+          pnpm lint:fix
+          rm -rf pnpm-lock.yaml
 
       - name: Create PR
         uses: ubill-ge/sdk-generator/.github/actions/pr-creator@main
