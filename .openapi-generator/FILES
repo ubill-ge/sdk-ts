@@ -20,6 +20,7 @@ docs/SMSBalanceResponse.md
 docs/SMSPayload.md
 docs/SendSMSResponse.md
 docs/SmsApi.md
+eslint.config.mjs
 index.ts
 model/base-response.ts
 model/brand-name.ts

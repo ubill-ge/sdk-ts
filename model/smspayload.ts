@@ -12,34 +12,37 @@
  * Do not edit the class manually.
  */
 
+
+
 /**
- *
+ * 
  * @export
  * @interface SMSPayload
  */
 export interface SMSPayload {
-  /**
-   *
-   * @type {number}
-   * @memberof SMSPayload
-   */
-  brandID: number;
-  /**
-   *
-   * @type {Array<number>}
-   * @memberof SMSPayload
-   */
-  numbers: Array<number>;
-  /**
-   *
-   * @type {string}
-   * @memberof SMSPayload
-   */
-  text: string;
-  /**
-   * Enable/disable checking numbers in the stop list
-   * @type {boolean}
-   * @memberof SMSPayload
-   */
-  stopList: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof SMSPayload
+     */
+    'brandID': number;
+    /**
+     * 
+     * @type {Array<number>}
+     * @memberof SMSPayload
+     */
+    'numbers': Array<number>;
+    /**
+     * 
+     * @type {string}
+     * @memberof SMSPayload
+     */
+    'text': string;
+    /**
+     * Enable/disable checking numbers in the stop list
+     * @type {boolean}
+     * @memberof SMSPayload
+     */
+    'stopList': boolean;
 }
+

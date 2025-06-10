@@ -12,16 +12,19 @@
  * Do not edit the class manually.
  */
 
+
+
 /**
- *
+ * 
  * @export
  * @interface CreateBrandNamePayload
  */
 export interface CreateBrandNamePayload {
-  /**
-   *
-   * @type {string}
-   * @memberof CreateBrandNamePayload
-   */
-  brandName: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof CreateBrandNamePayload
+     */
+    'brandName': string;
 }
+

@@ -12,12 +12,15 @@
  * Do not edit the class manually.
  */
 
+
 // May contain unused imports in some cases
 // @ts-ignore
-import type { BaseResponse } from "./base-response";
+import type { BaseResponse } from './base-response';
 
 /**
  * @type CreateBrandNameResponse
  * @export
  */
 export type CreateBrandNameResponse = BaseResponse;
+
+

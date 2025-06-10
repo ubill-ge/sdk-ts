@@ -12,22 +12,25 @@
  * Do not edit the class manually.
  */
 
+
+
 /**
- *
+ * 
  * @export
  * @interface DeliveryReportItem
  */
 export interface DeliveryReportItem {
-  /**
-   *
-   * @type {string}
-   * @memberof DeliveryReportItem
-   */
-  number?: string;
-  /**
-   *
-   * @type {string}
-   * @memberof DeliveryReportItem
-   */
-  statusID?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeliveryReportItem
+     */
+    'number'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof DeliveryReportItem
+     */
+    'statusID'?: string;
 }
+
