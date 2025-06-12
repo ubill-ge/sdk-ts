@@ -2,6 +2,13 @@ name: Generate SDK
 
 on:
   workflow_dispatch:
+    inputs:
+      trigger-commit-hash:
+        description: 'The commit SHA that triggered the generation action'
+        required: true
+      trigger-commit-message:
+        description: 'The commit message associated with the triggering commit'
+        required: true
 
 jobs:
   generate:
@@ -57,3 +64,5 @@ jobs:
           sdk-version: ${{ steps.generate.outputs.sdk-version }}
           sdk-path: ${{ env.SDK_PATH }}
           committer: '${{ steps.app-token.outputs.app-slug }}[bot] <${{ steps.user-id.outputs.id }}+${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com>'
+          trigger-commit-hash: '${{ inputs.trigger-commit-hash }}'
+          trigger-commit-message: '${{ inputs.trigger-commit-message }}'
