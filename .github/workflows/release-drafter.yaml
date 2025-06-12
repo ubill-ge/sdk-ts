@@ -9,8 +9,9 @@ on:
       - opened
       - reopened
       - synchronize
+      - closed
 
 jobs:
   update-release-draft:
-    uses: ubill-ge/sdk-generator/.github/workflows/sdk-release-drafter.yaml@main
+    uses: ubill-ge/sdk-generator/.github/workflows/sdk-release-drafter.yaml@test
     secrets: inherit
