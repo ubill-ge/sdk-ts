@@ -1,6 +1,8 @@
 .github/CODEOWNERS
+.github/release-drafter.yaml
 .github/workflows/lint.yaml
 .github/workflows/publish.yaml
+.github/workflows/release-drafter.yaml
 .gitignore
 .npmignore
 CONTRIBUTING.md
