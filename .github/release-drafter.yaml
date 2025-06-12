@@ -1,4 +1,4 @@
-name-template: '🚀 Generate v$RESOLVED_VERSION'
+name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
 change-title-escapes: '\<*_&@#'
 header: |
@@ -13,19 +13,22 @@ footer: |
 autolabeler:
   - label: 'feature'
     title:
-      - '/feat/i'
+      - '/^feat(\(|:)/i'
   - label: 'bug'
     title:
-      - '/fix/i'
+      - '/^fix(\(|:)/i'
   - label: 'refactor'
     title:
-      - '/refactor/i'
+      - '/^refactor(\(|:)/i'
   - label: 'docs'
     title:
-      - '/docs/i'
+      - '/^docs(\(|:)/i'
   - label: 'dependencies'
     title:
-      - '/chore\(deps\)/i'
+      - '/^chore\(deps\)/i'
+  - label: 'release'
+    title:
+      - '/prepare\s+release/i'
 categories:
   - title: '✨ Features'
     labels:
@@ -44,3 +47,5 @@ categories:
       - 'dependencies'
   - title: '📝 Other Changes'
     labels: [ ]
+exclude-labels:
+  - 'release'
