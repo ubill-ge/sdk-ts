@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **statusID** | **number** | Response status code | [default to undefined]
 **message** | **string** | Human-readable response message | [optional] [default to undefined]
-**result** | [**Array&lt;DeliveryReportItem&gt;**](DeliveryReportItem.md) |  | [optional] [default to undefined]
+**result** | [**Array&lt;DeliveryReportItem&gt;**](DeliveryReportItem.md) | Delivery report results | [optional] [default to undefined]
 
 ## Example
 

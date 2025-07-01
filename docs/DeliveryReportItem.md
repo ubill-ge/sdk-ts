@@ -1,12 +1,13 @@
 # DeliveryReportItem
 
+SMS delivery status for a phone number
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**number** | **string** |  | [optional] [default to undefined]
-**statusID** | **string** |  | [optional] [default to undefined]
+**number** | **string** | Phone number as string | [default to undefined]
+**statusID** | **string** | Delivery status as string | [default to undefined]
 
 ## Example
 

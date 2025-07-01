@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **statusID** | **number** | Response status code | [default to undefined]
 **message** | **string** | Human-readable response message | [optional] [default to undefined]
-**brandID** | **number** | Brand identifier | [optional] [default to undefined]
+**brandID** | **number** | Brand identifier as integer | [optional] [default to undefined]
 
 ## Example
 
