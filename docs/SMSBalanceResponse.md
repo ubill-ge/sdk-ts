@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **statusID** | **number** | Response status code | [default to undefined]
 **message** | **string** | Human-readable response message | [optional] [default to undefined]
-**sms** | **string** |  | [optional] [default to undefined]
+**sms** | **string** | SMS balance as string | [optional] [default to undefined]
 
 ## Example
 

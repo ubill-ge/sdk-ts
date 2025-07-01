@@ -1,5 +1,5 @@
 /* tslint:disable */
-/* eslint-disable */
+ 
 /**
  * UBill API
  * UBill API - provides programmatic access to our resources. You will be able to integrate our service into your system and communicate with clients easily.
@@ -13,14 +13,18 @@
  */
 
 
-// May contain unused imports in some cases
-// @ts-ignore
-import type { BaseResponse } from './base-response';
 
 /**
- * @type SendSMSResponse
+ * Request payload for creating a brand name
  * @export
+ * @interface CreateBrandNameRequest
  */
-export type SendSMSResponse = BaseResponse;
-
+export interface CreateBrandNameRequest {
+    /**
+     * Brand name to create
+     * @type {string}
+     * @memberof CreateBrandNameRequest
+     */
+    'brandName': string;
+}
 

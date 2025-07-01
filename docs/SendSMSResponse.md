@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **statusID** | **number** | Response status code | [default to undefined]
 **message** | **string** | Human-readable response message | [optional] [default to undefined]
-**smsID** | **string** |  | [optional] [default to undefined]
+**smsID** | **string** | SMS identifier as string | [optional] [default to undefined]
 
 ## Example
 
